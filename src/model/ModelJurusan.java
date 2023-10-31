@@ -9,9 +9,7 @@ public class ModelJurusan{
         this.kodeJurusan = kodeJurusan;
         this.namaJurusan = namaJurusan;
         this.namaFakultas = namaFakultas;
-        System.out.println("Hei");
-        System.out.println("YOGA");
-        System.out.println(" Honor");
+        
     }
     public void viewJurusan(){
         System.out.println("Kode Jurusan : " + this.kodeJurusan);
