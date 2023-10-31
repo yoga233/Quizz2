@@ -1,36 +1,27 @@
 package model;
-import node.NodeJurusan;
-import java.util.*;
 
-public class ModelJurusan {
-    ArrayList<NodeJurusan> departmens;
+public class ModelJurusan{
+    int kodeJurusan;
+    String namaJurusan;
+    String namaFakultas;
     
-    public ModelJurusan(){
-        this.departmens = new ArrayList<>();
+    public ModelJurusan(int kodeJurusan, String namaJurusan, String namaFakultas){
+        this.kodeJurusan = kodeJurusan;
+        this.namaJurusan = namaJurusan;
+        this.namaFakultas = namaFakultas;
+        System.out.println("Hei");
+        System.out.println("YOGA");
+        System.out.println(" Honor");
     }
-    public void insertJurusan(String nama, String fakultas){
-        int index = departmens.size();
-        this.departmens.add(new NodeJurusan(index+1,nama,fakultas));
+    public void viewJurusan(){
+        System.out.println("Kode Jurusan : " + this.kodeJurusan);
+        System.out.println("Nama Jurusan : "+ this.namaJurusan); 
+        System.out.println("Nama Fakultas : " + this.namaFakultas);
     }
-    public void viewAllJurusan(){
-        for(int i = 0; i<departmens.size(); i++){
-            this.departmens.get(i).viewJurusan();
-            System.out.println("---------------");
-           
-        }
+    public String getNama(){
+        return namaJurusan;
     }
-    public void updateJurusan(String namaJurusan, String newFakultas){
-        for (int i = 0; i<departmens.size(); i++){
-            if(namaJurusan.equals(departmens.get(i).getNama())){
-                departmens.get(i).setNamaFakultas(newFakultas);
-            }       
-        }
-    }
-    public void deleteJurusan(String namaJurusan){
-        for(int i = 0; i<departmens.size(); i++){
-            if(namaJurusan.equals(departmens.get(i).getNama())){
-                departmens.remove(i);
-            }
-        }
+    public void setNamaFakultas(String namaFakultas){
+        this.namaFakultas = namaFakultas;
     }
 }
