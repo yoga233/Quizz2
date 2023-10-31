@@ -16,6 +16,7 @@ public class ModelJurusan {
         for(int i = 0; i<departmens.size(); i++){
             this.departmens.get(i).viewJurusan();
             System.out.println("---------------");
+            System.out.println("yoga cupu");
         }
     }
     public void updateJurusan(String namaJurusan, String newFakultas){
