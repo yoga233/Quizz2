@@ -9,8 +9,7 @@ public class NodeJurusan{
         this.kodeJurusan = kodeJurusan;
         this.namaJurusan = namaJurusan;
         this.namaFakultas = namaFakultas;
-        //test
-        System.out.println("YOGA");
+        System.out.println("Hei");
     }
     public void viewJurusan(){
         System.out.println("Kode Jurusan : " + this.kodeJurusan);
