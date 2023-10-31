@@ -55,42 +55,6 @@ public class Main {
                             System.out.println("2. view data mahasiswa");
                             System.out.println("3. Kembali ke menu");
                             choice = input.nextInt();
-                            if (choice == 1){
-                                System.out.print("Masukkan Jurusan Anda : ");
-                                String namaJurusan = input.next();
-                                System.out.println("Masukan Nama Fakultas Dari jurusan Anda : ");
-                                String namafakultas = input.next();
-                                System.out.print("Masukkan Nama Anda: ");
-                                String namaMahasiswa = input.next();
-                                System.out.print("Masukkan NPM Anda: ");
-                                String npmMahasiswa = input.next();
-                                System.out.print("Masukkan No. Telepon Anda: ");
-                                String telpMahasiswa = input.next();
-                                System.out.print("Masukkan Harga Pembayaran: ");
-                                String hargaPembayaran = input.next();
-                                System.out.print("Masukkan Nama Kasir: ");
-                                String namaKasir = input.next();
-                                System.out.print("Masukkan No. KTP Orang Tua: ");
-                                String noKTP = input.next();
-                                System.out.print("Masukkan Nama Orang Tua: ");
-                                String namaOrangTua = input.next();
-                                System.out.print("Masukkan Alamat Orang Tua: ");
-                                String alamatOrangTua = input.next();
-                                System.out.print("Masukkan No. Telepon Orang Tua: ");
-                                String noTelpOrangTua = input.next();
-                                wali.InsertWali(noKTP, namaOrangTua, alamatOrangTua, noTelpOrangTua);
-                                bayar.InsertPembayaran(hargaPembayaran, namaKasir);
-                                siswa.InsertMahasiswa(namaMahasiswa,npmMahasiswa,telpMahasiswa);
-                                jurus.InsertJurusan(namaJurusan,namafakultas);
-                            }else if (choice == 2){
-                                jurus.ViewallJurusan();
-                                siswa.ViewallMahasiswa();
-                                wali.ViewDataDiriOrtu();
-                                bayar.ViewStrukall();
-                            }else {
-
-                            }
-
                             break;
                         } else {
                             System.out.println("pasword salah ");
@@ -99,10 +63,6 @@ public class Main {
                     }
                     break;
                 case 3:
-                    jurus.ViewallJurusan();
-                    siswa.ViewallMahasiswa();
-                    wali.ViewDataDiriOrtu();
-                    bayar.ViewStrukall();
                     System.out.println("Terima kasih! Keluar dari program.");
                     break;
                 default:
