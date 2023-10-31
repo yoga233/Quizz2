@@ -51,15 +51,13 @@ public class Main {
                         String pass = input.next();
                         menu:
                         if (akun.cekLogin(user, pass)) {
-                            System.out.println("1. pendaftran Mahasiswa");
-                            System.out.println("2. view data mahasiswa");
-                            System.out.println("3. Kembali ke menu");
-                            choice = input.nextInt();
+                            System.out.println("Berhasil");
                             break;
-                        } else {
+                        }else {
                             System.out.println("pasword salah ");
-                            continue;
+                            
                         }
+                            continue;
                     }
                     break;
                 case 3:
