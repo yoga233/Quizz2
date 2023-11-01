@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
+import model.ModelPendaftaran;
+import java.util.ArrayList;
 
-/**
- *
- * @author Lyxx
- */
 public class ControllerPendaftaran {
-    
+    ArrayList<ModelPendaftaran> daftarMahasiswa = new ArrayList<>();
+
+    public void daftarMahasiswa(String Mhs, String tglLahir, String waliMhs, String jurusan) {
+        ModelPendaftaran mahasiswa = new ModelPendaftaran(Mhs, tglLahir, waliMhs, jurusan);
+        daftarMahasiswa.add(mahasiswa);
+    }
+
+    public ArrayList<ModelPendaftaran> getDaftarMahasiswa() {
+        return daftarMahasiswa;
+    }
 }
