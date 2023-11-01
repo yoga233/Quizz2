@@ -8,9 +8,9 @@ public class ControllerDoswal{
     public ControllerDoswal(){
         this.Doswal = new ArrayList<>();
     }
-    public void InsertDoswal(int nip , String nama , String jurusan , String contact){
+    public void InsertDoswal( String nama ,String nip ,String jurusan , String contact){
         int index = Doswal.size();
-        this.Doswal.add(new ModelDoswal(nip, nama, jurusan, contact));
+        this.Doswal.add(new ModelDoswal(nama, nip, jurusan, contact));
     }
     public void ViewallMhs(){
         for (int i = 0 ; i < Doswal.size();i++){

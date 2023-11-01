@@ -1,14 +1,14 @@
 package model;
 
 public class ModelDoswal{
-    int nip;
+    String nip;
     String nama;
     String jurusan;
     String contact;
 
-    public ModelDoswal(int nip , String nama , String jurusan , String contact){
-        this.nip = nip;
+    public ModelDoswal(  String nama ,String nip, String jurusan , String contact){
         this.nama = nama;
+        this.nip = nip;
         this.jurusan = jurusan;
         this.contact = contact;
     }

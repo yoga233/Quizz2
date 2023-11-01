@@ -4,6 +4,7 @@ package view;
 //import model.ModelMahasiswa;
 //import model.ModelPembayaran;
 //import model.ModelOrtuMhs;
+import controller.ControllerDoswal;
 import model.ModelAkun;
 import model.ModelPendaftaran;
 import model.ModelAdmin;
@@ -27,7 +28,8 @@ public class Main {
         ControllerAkun akun = new ControllerAkun();
         ControllerPendaftaran daftarmahasiswa = new ControllerPendaftaran();
         ControllerAdmin admin = new ControllerAdmin(); // Inisialisasi objek ControllerAdmin
-        
+        ControllerDoswal wali = new ControllerDoswal();
+
 
         
         
@@ -110,27 +112,42 @@ public class Main {
                             }
                             break;
                         
-                        }else if (admin.cekLogin(user, pass)){
-                                    int Pilwali = 0;
-                                    System.out.println("berhasil");
-                                    System.out.println("==================");
-                                    System.out.println("1. Dosen Wali ");
-                                    System.out.println("2. bayat her ");
-                                    System.out.println("3. kembali ");
-                                    switch (Pilwali){
-                                        case 1 :
-                                            System.out.println("Masukan Nama Dosen : ");
-                                            String namadoswal = input.next();
-                                            System.out.println("Masukan NIP Dosen  : ");
-                                            String NIPdoswal = input.next();
-                                            System.out.println("Jurusan Dosen : ");
-                                            String JurusanDoswal = input.next();
-                                            System.out.println("Masukan Contact Dosen : ");
-                                            String Contdoswal =input.next();
+                        }else if (admin.cekLogin(user, pass)) {
+                            int Pilwali = 0;
+                            while (Pilwali != 3) {
+                                System.out.println("berhasil");
+                                System.out.println("==================");
+                                System.out.println("1. Dosen Wali ");
+                                System.out.println("2. bayat her ");
+                                System.out.println("3. kembali ");
+                                System.out.println("Masukan Pilihan Anda");
+                                Pilwali = input.nextInt();
+                                switch (Pilwali) {
+                                    case 1:
+                                        System.out.println("Masukan Nama Dosen : ");
+                                        String namadoswal = input.next();
+                                        System.out.println("Masukan NIP Dosen  : ");
+                                        String NIPdoswal = input.next();
+                                        System.out.println("Jurusan Dosen : ");
+                                        String JurusanDoswal = input.next();
+                                        System.out.println("Masukan Contact Dosen : ");
+                                        String Contdoswal = input.next();
+                                        wali.InsertDoswal(namadoswal, NIPdoswal, JurusanDoswal, Contdoswal);
+                                        System.out.println("daftar wali berhasil");
+                                        break;
+                                    case 2:
+                                        break;
+                                    case  3:
+                                        break;
+                                    default:
+                                        System.out.println("yang bener ");
+                                        break;
 
-                                    }
-                                    break;
-                                    }
+                                }
+                                break;
+                            }
+                            break ;
+                        }
                         else {
                             System.out.println("pasword salah ");
                             
