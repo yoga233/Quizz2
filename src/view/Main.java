@@ -26,7 +26,7 @@ public class Main {
         ControllerAdmin admin = new ControllerAdmin(); // Inisialisasi objek ControllerAdmin
         ControllerDoswal wali = new ControllerDoswal();
         ControllerPembayaran bayar = new ControllerPembayaran();
-
+        
 
         
         
@@ -106,7 +106,14 @@ public class Main {
                                             } else {
                                                 System.out.println("Dosen Wali belum ada.");
                                             }
+                                            if (!bayar.isbayarEmpty()) {
+                                                System.out.println("Data Dosen Wali:");
+                                                bayar.ViewStrukall();
+                                            } else {
+                                                System.out.println("Dosen Wali belum ada.");
+                                            }
                                             break;
+                                            
                                       
                                     case 3:
                                         break;

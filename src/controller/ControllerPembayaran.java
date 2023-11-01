@@ -19,4 +19,7 @@ public class ControllerPembayaran {
             System.out.println("_______________________");
         }
     }
+    public boolean isbayarEmpty() {
+        return this.bayar.isEmpty();
+    }
 }
