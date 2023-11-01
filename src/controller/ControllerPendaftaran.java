@@ -16,4 +16,5 @@ public class ControllerPendaftaran {
     public ArrayList<ModelPendaftaran> getDaftarMahasiswa() {
         return daftarMahasiswa;
     }
+
 }

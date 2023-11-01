@@ -4,14 +4,10 @@ package view;
 //import model.ModelMahasiswa;
 //import model.ModelPembayaran;
 //import model.ModelOrtuMhs;
-import controller.ControllerDoswal;
+import controller.*;
 import model.ModelAkun;
 import model.ModelPendaftaran;
 import model.ModelAdmin;
-        
-import controller.ControllerAkun;
-import controller.ControllerPendaftaran;
-import controller.ControllerAdmin;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;
@@ -29,6 +25,7 @@ public class Main {
         ControllerPendaftaran daftarmahasiswa = new ControllerPendaftaran();
         ControllerAdmin admin = new ControllerAdmin(); // Inisialisasi objek ControllerAdmin
         ControllerDoswal wali = new ControllerDoswal();
+        ControllerPembayaran bayar = new ControllerPembayaran();
 
 
         
@@ -100,6 +97,7 @@ public class Main {
                                             System.out.println("Tanggal Lahir: " + mahasiswa.getTglLahir());
                                             System.out.println("Wali Mahasiswa: " + mahasiswa.getWaliMhs());
                                             System.out.println("Jurusan: " + mahasiswa.getJurusan());
+//                                            System.out.println(" Dosen wali : " + mahasiswa.);
                                             System.out.println();
                                         }
                                         break;
@@ -134,9 +132,15 @@ public class Main {
                                         String Contdoswal = input.next();
                                         wali.InsertDoswal(namadoswal, NIPdoswal, JurusanDoswal, Contdoswal);
                                         System.out.println("daftar wali berhasil");
-                                        break;
+                                        continue;
                                     case 2:
-                                        break;
+                                        System.out.println("Menu pembayaran her");
+                                        System.out.println("Masukan Pemnbayaran Her : ");
+                                        String her = input.next();
+                                        System.out.println("Masuka Kasir : ");
+                                        String kasir = input.next();
+                                        bayar.InsertPembayaran(her,kasir);
+                                        continue;
                                     case  3:
                                         break;
                                     default:

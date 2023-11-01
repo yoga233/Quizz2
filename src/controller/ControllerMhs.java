@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class ControllerMhs{
     ArrayList<ModelMhs> siswa;
+    ControllerDoswal wali =  new ControllerDoswal();
     public ControllerMhs(){
         this.siswa = new ArrayList<>();
     }
@@ -17,6 +18,7 @@ public class ControllerMhs{
             this.siswa.get(i).ViewDataMhs();
 
         }
+
     }
 
 }
