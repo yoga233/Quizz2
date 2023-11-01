@@ -18,5 +18,9 @@ public class ControllerDoswal{
 
         }
     }
+    public boolean isDoswalEmpty() {
+        return this.Doswal.isEmpty();
+    }
+
 
 }
