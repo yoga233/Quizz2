@@ -12,7 +12,7 @@ public class ModelDoswal{
         this.jurusan = jurusan;
         this.contact = contact;
     }
-    public void ViewDataDoawal (){
+    public void ViewDataDoswal (){
         System.out.println("No NIP : " + this.nip);
         System.out.println("Nawa Dosen Wali : " + this.nama);
         System.out.println("Jurusan : "+ this.jurusan);
