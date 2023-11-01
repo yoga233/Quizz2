@@ -1,8 +1,8 @@
 package model;
 
 public class ModelAdmin {
-    private String admin;
-    private String pass;
+    String admin;
+    String pass;
 
     public ModelAdmin() {
         this.admin = "admin";

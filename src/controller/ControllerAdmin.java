@@ -1,7 +1,6 @@
 package controller;
 
 import model.ModelAdmin;
-import model.ModelAkun;
 
 import java.util.ArrayList;
 
@@ -10,6 +9,8 @@ public class ControllerAdmin {
 
     public ControllerAdmin(){
         this.Admin = new ArrayList<>();
+        ModelAdmin admin = new ModelAdmin();
+        Admin.add(admin);
     }
     public Boolean cekLogin(String user, String pass){
         for(ModelAdmin admin : Admin ){

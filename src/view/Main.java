@@ -6,10 +6,11 @@ package view;
 //import model.ModelOrtuMhs;
 import model.ModelAkun;
 import model.ModelPendaftaran;
-
+import model.ModelAdmin;
+        
 import controller.ControllerAkun;
 import controller.ControllerPendaftaran;
-
+import controller.ControllerAdmin;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;
@@ -25,6 +26,11 @@ public class Main {
 //        ModelOrtuMhs wali = new ModelOrtuMhs();
         ControllerAkun akun = new ControllerAkun();
         ControllerPendaftaran daftarmahasiswa = new ControllerPendaftaran();
+        ControllerAdmin admin = new ControllerAdmin(); // Inisialisasi objek ControllerAdmin
+
+        
+        
+  
 
         Scanner input = new Scanner(System.in);
 
@@ -102,7 +108,12 @@ public class Main {
                                 }
                             }
                             break;
-                        }else {
+                        
+                        }else if (admin.cekLogin(user, pass)){
+                                    System.out.println("berhasil");
+                                    break;
+                                    }
+                        else {
                             System.out.println("pasword salah ");
                             
                         }
