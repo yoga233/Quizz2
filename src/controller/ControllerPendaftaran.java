@@ -3,7 +3,7 @@ import model.ModelPendaftaran;
 import java.util.ArrayList;
 
 public class ControllerPendaftaran {
-    ArrayList<ModelPendaftaran> daftarMahasiswa = new ArrayList<>();
+    ArrayList<ModelPendaftaran> daftarMahasiswa;
     public ControllerPendaftaran(){
         this.daftarMahasiswa = new ArrayList<>();
     }

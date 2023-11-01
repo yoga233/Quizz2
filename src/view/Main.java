@@ -79,7 +79,7 @@ public class Main {
                                         String jurusan = input.next();
                                         
                                         ModelPendaftaran mahasiswaBaru = new ModelPendaftaran(nama, tanggalLahir, waliMhs, jurusan);
-                                        daftarmahasiswa.getDaftarMahasiswa();
+                                        daftarmahasiswa.daftarMahasiswa(nama,tanggalLahir,waliMhs,jurusan);
                                         System.out.println("Pendaftaran mahasiswa berhasil.");
                                         break;
 
