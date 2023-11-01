@@ -27,6 +27,7 @@ public class Main {
         ControllerAkun akun = new ControllerAkun();
         ControllerPendaftaran daftarmahasiswa = new ControllerPendaftaran();
         ControllerAdmin admin = new ControllerAdmin(); // Inisialisasi objek ControllerAdmin
+        
 
         
         
@@ -110,7 +111,24 @@ public class Main {
                             break;
                         
                         }else if (admin.cekLogin(user, pass)){
+                                    int Pilwali = 0;
                                     System.out.println("berhasil");
+                                    System.out.println("==================");
+                                    System.out.println("1. Dosen Wali ");
+                                    System.out.println("2. bayat her ");
+                                    System.out.println("3. kembali ");
+                                    switch (Pilwali){
+                                        case 1 :
+                                            System.out.println("Masukan Nama Dosen : ");
+                                            String namadoswal = input.next();
+                                            System.out.println("Masukan NIP Dosen  : ");
+                                            String NIPdoswal = input.next();
+                                            System.out.println("Jurusan Dosen : ");
+                                            String JurusanDoswal = input.next();
+                                            System.out.println("Masukan Contact Dosen : ");
+                                            String Contdoswal =input.next();
+
+                                    }
                                     break;
                                     }
                         else {
