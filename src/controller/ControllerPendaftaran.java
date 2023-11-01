@@ -16,5 +16,8 @@ public class ControllerPendaftaran {
     public ArrayList<ModelPendaftaran> getDaftarMahasiswa() {
         return daftarMahasiswa;
     }
+    public Boolean ifEmpty (){
+        return this.daftarMahasiswa.isEmpty();
+    }
 
 }
