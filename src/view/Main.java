@@ -100,7 +100,14 @@ public class Main {
 //                                            System.out.println(" Dosen wali : " + mahasiswa.);
                                             System.out.println();
                                         }
-                                        break;
+                                            if (!wali.isDoswalEmpty()) {
+                                                System.out.println("Data Dosen Wali:");
+                                                wali.ViewallMhs();
+                                            } else {
+                                                System.out.println("Dosen Wali belum ada.");
+                                            }
+                                            break;
+                                      
                                     case 3:
                                         break;
 
