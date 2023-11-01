@@ -24,6 +24,7 @@ public class Main {
 //        ModelPembayaran bayar = new ModelPembayaran();
 //        ModelOrtuMhs wali = new ModelOrtuMhs();
         ControllerAkun akun = new ControllerAkun();
+        ControllerPendaftaran daftarmahasiswa = new ControllerPendaftaran();
 
         Scanner input = new Scanner(System.in);
 
@@ -78,14 +79,14 @@ public class Main {
                                         String jurusan = input.next();
                                         
                                         ModelPendaftaran mahasiswaBaru = new ModelPendaftaran(nama, tanggalLahir, waliMhs, jurusan);
-                                        daftarMahasiswa.add(mahasiswaBaru);
+                                        daftarmahasiswa.getDaftarMahasiswa();
                                         System.out.println("Pendaftaran mahasiswa berhasil.");
                                         break;
 
                                     case 2:
                                         // Kode untuk menampilkan data mahasiswa
                                         System.out.println("Data Mahasiswa yang Telah Mendaftar:");
-                                        for (ModelPendaftaran mahasiswa : daftarMahasiswa) {
+                                        for (ModelPendaftaran mahasiswa : daftarmahasiswa.getDaftarMahasiswa()) {
                                             System.out.println("Nama: " + mahasiswa.getMhs());
                                             System.out.println("Tanggal Lahir: " + mahasiswa.getTglLahir());
                                             System.out.println("Wali Mahasiswa: " + mahasiswa.getWaliMhs());
