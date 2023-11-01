@@ -18,4 +18,12 @@ public class ModelDoswal{
         System.out.println("Jurusan : "+ this.jurusan);
         System.out.println("contact : " + this.contact);
     }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
 }

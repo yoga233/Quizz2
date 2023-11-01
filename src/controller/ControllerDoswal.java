@@ -23,4 +23,22 @@ public class ControllerDoswal{
     }
 
 
+    public void UpadateDoswal(String nama , String newnama){
+        for (int i = 0 ; i < Doswal.size(); i++){
+            if (nama.equals(Doswal.get(i).getNama())){
+                Doswal.get(i).setNama(newnama);
+            }
+        }
+
+    }
+    public void DeleteDoswal(String nama){
+        for (int i = 0 ; i < Doswal.size(); i++){
+            if (nama.equals(Doswal.get(i).getNama())){
+                Doswal.remove(i);
+            }
+        }
+    }
+
+
+
 }
