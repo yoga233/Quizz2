@@ -2,22 +2,14 @@ package controller;
 
 import model.ModelAdmin;
 
-import java.util.ArrayList;
-
 public class ControllerAdmin {
-    ArrayList<ModelAdmin> Admin;
+    ModelAdmin admin;
 
-    public ControllerAdmin(){
-        this.Admin = new ArrayList<>();
-        ModelAdmin admin = new ModelAdmin();
-        Admin.add(admin);
+    public ControllerAdmin() {
+        this.admin = new ModelAdmin();
     }
-    public Boolean cekLogin(String user, String pass){
-        for(ModelAdmin admin : Admin ){
-            if (admin.getAdmin().equals(user) && admin.getPass().equals(pass)){
-                return true;
-            }
-        }
-        return false;
+
+    public Boolean cekLogin(String user, String pass) {
+        return admin.getAdmin().equals(user) && admin.getPass().equals(pass);
     }
 }
