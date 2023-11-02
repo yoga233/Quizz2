@@ -3,13 +3,13 @@ package view;
 import controller.*;
 import model.*;
 
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
-import java.util.logging.SocketHandler;
+
 
 public class Main {
-    public void pendaftaranmhs (){
-    }
+
+
     public static void main(String[] args) {
         ControllerAkun akun = new ControllerAkun();
         ControllerPendaftaran daftarmahasiswa = new ControllerPendaftaran();
@@ -47,7 +47,7 @@ public class Main {
                         String user = input.next();
                         System.out.println("Masukan Passworld anda ");
                         String pass = input.next();
-                        menu:
+
                         if (akun.cekLogin(user, pass)) {
                             System.out.println("Berhasil");
                             
@@ -73,8 +73,8 @@ public class Main {
                                         System.out.println("Masukan Fakultas :");
                                         String fakultas = input.next();
                                         
-                                        ModelPendaftaran mahasiswaBaru = new ModelPendaftaran(nama, tanggalLahir, waliMhs);
-                                        daftarmahasiswa.daftarMahasiswa(nama,tanggalLahir,waliMhs);
+                                        ModelPendaftaran mahasiswaBaru = new ModelPendaftaran(nama, tanggalLahir, waliMhs,user);
+                                        daftarmahasiswa.daftarMahasiswa(nama,tanggalLahir,waliMhs,user);
                                         Jurusan.insertJurusan(jurusan,fakultas);
                                         System.out.println("Pendaftaran mahasiswa berhasil.");
                                         break;
@@ -83,10 +83,11 @@ public class Main {
                                         // Kode untuk menampilkan data mahasiswa
                                         System.out.println("Data Mahasiswa yang Telah Mendaftar:");
                                         for (ModelPendaftaran mahasiswa : daftarmahasiswa.getDaftarMahasiswa()) {
-                                            System.out.println("Nama: " + mahasiswa.getMhs());
-                                            System.out.println("Tanggal Lahir: " + mahasiswa.getTglLahir());
-                                            System.out.println("Wali Mahasiswa: " + mahasiswa.getWaliMhs());
-
+                                            if (mahasiswa.getUsername().equals(user)) {
+                                                System.out.println("Nama: " + mahasiswa.getMhs());
+                                                System.out.println("Tanggal Lahir: " + mahasiswa.getTglLahir());
+                                                System.out.println("Wali Mahasiswa: " + mahasiswa.getWaliMhs());
+                                            }
 //                                            System.out.println(" Dosen wali : " + mahasiswa.);
 
                                         }

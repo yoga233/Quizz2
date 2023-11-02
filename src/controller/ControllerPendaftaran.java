@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 public class ControllerPendaftaran {
     ArrayList<ModelPendaftaran> daftarMahasiswa;
+
     public ControllerPendaftaran(){
         this.daftarMahasiswa = new ArrayList<>();
     }
 
-    public void daftarMahasiswa (String Mhs, String tglLahir, String waliMhs) {
-        ModelPendaftaran mahasiswa = new ModelPendaftaran(Mhs, tglLahir, waliMhs);
+    public void daftarMahasiswa (String Mhs, String tglLahir, String waliMhs,String username) {
+        ModelPendaftaran mahasiswa = new ModelPendaftaran(Mhs, tglLahir, waliMhs,username);
         daftarMahasiswa.add(mahasiswa);
     }
 
