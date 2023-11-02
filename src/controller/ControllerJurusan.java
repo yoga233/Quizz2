@@ -42,4 +42,8 @@ public class ControllerJurusan {
         }
         return jurusan;
     }
+
+    public ArrayList<ModelJurusan> getDepartmens() {
+        return departmens;
     }
+}

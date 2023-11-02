@@ -16,6 +16,7 @@ public class Main {
         ControllerAdmin admin = new ControllerAdmin(); // Inisialisasi objek ControllerAdmin
         ControllerDoswal wali = new ControllerDoswal();
         ControllerPembayaran bayar = new ControllerPembayaran();
+        ControllerJurusan Jurusan = new ControllerJurusan();
   
 
         Scanner input = new Scanner(System.in);
@@ -69,9 +70,12 @@ public class Main {
                                         String waliMhs = input.next();
                                         System.out.println("Masukkan Jurusan: ");
                                         String jurusan = input.next();
+                                        System.out.println("Masukan Fakultas :");
+                                        String fakultas = input.next();
                                         
-                                        ModelPendaftaran mahasiswaBaru = new ModelPendaftaran(nama, tanggalLahir, waliMhs, jurusan);
-                                        daftarmahasiswa.daftarMahasiswa(nama,tanggalLahir,waliMhs,jurusan);
+                                        ModelPendaftaran mahasiswaBaru = new ModelPendaftaran(nama, tanggalLahir, waliMhs);
+                                        daftarmahasiswa.daftarMahasiswa(nama,tanggalLahir,waliMhs);
+                                        Jurusan.insertJurusan(jurusan,fakultas);
                                         System.out.println("Pendaftaran mahasiswa berhasil.");
                                         break;
 
@@ -82,8 +86,12 @@ public class Main {
                                             System.out.println("Nama: " + mahasiswa.getMhs());
                                             System.out.println("Tanggal Lahir: " + mahasiswa.getTglLahir());
                                             System.out.println("Wali Mahasiswa: " + mahasiswa.getWaliMhs());
-                                            System.out.println("Jurusan: " + mahasiswa.getJurusan());
+
 //                                            System.out.println(" Dosen wali : " + mahasiswa.);
+
+                                        }
+                                        for(ModelJurusan jurusann :Jurusan.getDepartmens()){
+                                            System.out.println("Jurusan Mahasiswa " + jurusann.getNama());
                                             System.out.println();
                                         }
                                             if (!wali.isDoswalEmpty()) {
@@ -176,7 +184,17 @@ public class Main {
                                                     if(daftarmahasiswa.ifEmpty()){
                                                         System.out.println("Mahasiswa Tidak ada ");
                                                     }else {
-                                                        
+                                                        System.out.println(" Masukan jurusan yang lama : ");
+                                                        String namaJurusan = input.next();
+                                                        ModelJurusan jurusan = Jurusan.searchJurusan(namaJurusan);
+                                                        if (jurusan != null){
+                                                            System.out.println("Masukan nama JUrusan baru : ");
+                                                            String newjurusan = input.next();
+                                                            Jurusan.updateJurusan(namaJurusan,newjurusan);
+                                                            System.out.println("Jurusan Berhasil di pindahkan ");
+                                                        }else {
+                                                            System.out.println(" Jurusan Tidak di temukan ");
+                                                        }
                                                     }
                                                     break ;
                                                 default:

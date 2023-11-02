@@ -8,8 +8,8 @@ public class ControllerPendaftaran {
         this.daftarMahasiswa = new ArrayList<>();
     }
 
-    public void daftarMahasiswa (String Mhs, String tglLahir, String waliMhs, String jurusan) {
-        ModelPendaftaran mahasiswa = new ModelPendaftaran(Mhs, tglLahir, waliMhs, jurusan);
+    public void daftarMahasiswa (String Mhs, String tglLahir, String waliMhs) {
+        ModelPendaftaran mahasiswa = new ModelPendaftaran(Mhs, tglLahir, waliMhs);
         daftarMahasiswa.add(mahasiswa);
     }
 

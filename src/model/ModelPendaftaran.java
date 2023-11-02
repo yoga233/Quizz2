@@ -3,13 +3,13 @@ public class ModelPendaftaran {
     String Mhs;
     String tglLahir;
     String waliMhs;
-    String jurusan;
+//    String jurusan;
 
-    public ModelPendaftaran(String Mhs, String tglLahir, String waliMhs, String jurusan) {
+    public ModelPendaftaran(String Mhs, String tglLahir, String waliMhs) {
         this.Mhs = Mhs;
         this.tglLahir = tglLahir;
         this.waliMhs = waliMhs;
-        this.jurusan = jurusan;
+//        this.jurusan = jurusan;
     }
 
     public String getMhs() {
@@ -24,9 +24,9 @@ public class ModelPendaftaran {
         return waliMhs;
     }
 
-    public String getJurusan() {
-        return jurusan;
-    }
+//    public String getJurusan() {
+//        return jurusan;
+//    }
     
     public void ViewDaftar(){
     
