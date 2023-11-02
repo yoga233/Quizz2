@@ -1,13 +1,14 @@
 package controller;
 
 import model.ModelDoswal;
-import model.ModelMhs;
+import model.ModelPendaftaran;
 
 import java.util.ArrayList;
 
 public class ControllerDoswal {
     ArrayList<ModelDoswal> Doswal;
     ModelDoswal dosWal = new ModelDoswal();
+    ControllerPendaftaran daftarmahasiswa = new ControllerPendaftaran();
     public ControllerDoswal() {
         this.Doswal = new ArrayList<>();
     }
@@ -61,4 +62,28 @@ public class ControllerDoswal {
         }
         return doswal;
     }
+
+    public ModelDoswal getDosWal() {
+        return dosWal;
+    }
+
+    public ArrayList<ModelDoswal> getDoswall() {
+        return Doswal;
+    }
+    public void AssignDosenWali(String namadoswal, String namamahasiswa) {
+        ModelDoswal doswal = searchDoswa(namadoswal);
+        if (doswal != null) {
+            ModelPendaftaran mahasiswa = daftarmahasiswa.getmahasiswa(namamahasiswa);
+            if (mahasiswa != null) {
+                mahasiswa.setDosenWali(doswal);
+                doswal.getViewDataDoswal();
+                System.out.println(namamahasiswa + " ditetapkan sebagai mahasiswa " + doswal.getNama());
+            } else {
+                System.out.println("Mahasiswa dengan nama " + namamahasiswa + " tidak ditemukan.");
+            }
+        } else {
+            System.out.println("Dosen Wali dengan nama " + namadoswal + " tidak ditemukan.");
+        }
+    }
+
 }

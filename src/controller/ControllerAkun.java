@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class ControllerAkun {
     ArrayList<ModelAkun> lojin;
+    String currentUser;
 
     public ControllerAkun(){
         this.lojin = new ArrayList<>();
@@ -20,5 +21,13 @@ public class ControllerAkun {
 
         }
         return false;
+    }
+
+    public String getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(String currentUser) {
+        this.currentUser = currentUser;
     }
 }

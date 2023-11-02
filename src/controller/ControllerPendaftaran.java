@@ -20,5 +20,7 @@ public class ControllerPendaftaran {
     public Boolean ifEmpty (){
         return this.daftarMahasiswa.isEmpty();
     }
-
+    public ModelPendaftaran getmahasiswa(String nama){
+        return getmahasiswa(nama);
+    }
 }

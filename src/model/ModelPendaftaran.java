@@ -38,5 +38,8 @@ public class ModelPendaftaran {
     public void ViewDaftar(){
     
     }
+
+    public void setDosenWali(ModelDoswal doswal) {
+    }
 }
 

@@ -4,6 +4,7 @@ public class ModelDoswal extends Manusia {
     String nip;
     String jurusan;
     String contact;
+    private ModelDoswal dosenWali;
 
     public ModelDoswal(String nama, String nip, String jurusan, String contact) {
         this.nama = nama;
@@ -62,5 +63,14 @@ public class ModelDoswal extends Manusia {
     public void setTelp(String telp) {
         this.telp = telp;
     }
-    
+    public void setDosenWali(ModelDoswal dosenWali){
+        this.dosenWali = dosenWali;
+    }
+
+    public ModelDoswal getDosenWali() {
+        return dosenWali;
+    }
+
+    public void getViewDataDoswal() {
+    }
 }

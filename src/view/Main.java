@@ -50,6 +50,7 @@ public class Main {
 
                         if (akun.cekLogin(user, pass)) {
                             System.out.println("Berhasil");
+                            akun.setCurrentUser(user);
                             
                             while (choice != 3) {
                                 System.out.println("=== Menu ===");
@@ -61,7 +62,7 @@ public class Main {
 
                                 switch (choice) {
                                     case 1:
-                                        // Kode untuk mendaftar mahasiswa
+
                                         System.out.println("Masukkan Nama Mahasiswa: ");
                                         String nama = input.next();
                                         System.out.println("Masukkan Tanggal Lahir: ");
@@ -88,21 +89,22 @@ public class Main {
                                                 System.out.println("Tanggal Lahir: " + mahasiswa.getTglLahir());
                                                 System.out.println("Wali Mahasiswa: " + mahasiswa.getWaliMhs());
                                             }
-//                                            System.out.println(" Dosen wali : " + mahasiswa.);
-
                                         }
+                                        boolean jurusanDitemukan = false;
                                         for(ModelJurusan jurusann :Jurusan.getDepartmens()){
                                             if (jurusann.getNamaFakultas().equals(user)){
-                                            System.out.println("Jurusan Mahasiswa " + jurusann.getNamaJurusan());
+                                            System.out.println("Jurusan Mahasiswa :" + jurusann.getNamaJurusan());
                                             System.out.println("Falkultas : " + jurusann.getNamaFakultas());
                                             System.out.println();
-
+                                            jurusanDitemukan = true;
                                             }
                                         }
                                             if (!wali.isDoswalEmpty()) {
                                                 System.out.println("Data Dosen Wali:");
-                                                wali.ViewallMhs();
+                                                 for (ModelDoswal doswal : wali.getDoswall()){
+                                                doswal.ViewDataDoswal();
                                                 System.out.println();
+                                                 }
                                             } else {
                                                 System.out.println("Dosen Wali belum ada.");
                                             }
