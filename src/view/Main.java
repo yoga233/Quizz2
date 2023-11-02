@@ -112,11 +112,12 @@ public class Main {
                         
                         }else if (admin.cekLogin(user, pass)) {
                             int Pilwali = 0;
-                            while (Pilwali != 3) {
+                            while (Pilwali !=4 ) {
                                 System.out.println("berhasil");
                                 System.out.println("==================");
                                 System.out.println("1. Dosen Wali ");
                                 System.out.println("2. bayat her ");
+                                System.out.println("3. Menu Edit Mahasiswa ");
                                 System.out.println("3. kembali ");
                                 System.out.println("Masukan Pilihan Anda");
                                 Pilwali = input.nextInt();
@@ -142,7 +143,31 @@ public class Main {
                                         bayar.InsertPembayaran(her,kasir);
                                         continue;
                                     case  3:
-                                        break;
+                                        int pilihanadmin = 0;
+                                        while (pilihanadmin != 3) {
+                                            System.out.println("==================");
+                                            System.out.println("1. Ganti Jurusan ");
+                                            System.out.println("2. Ganti Dosen ");
+                                            System.out.println("Masukan pilihan ");
+                                            pilihanadmin = input.nextInt();
+                                            switch (pilihanadmin){
+                                                
+                                                case 1 :
+                                                    if (daftarmahasiswa.ifEmpty()){
+                                                        System.out.println("Mahasiswa Tidak Ada");
+                                                    }else {
+                                                        System.out.println(" Masukan Nama Dosen wali :");
+                                                        String gantiDoswal =input.next();
+                                                        wali.getDoswal(namadoswal,gantiDoswal);
+                                                        wali.UpadateDoswal(,gantiDoswal);
+                                                    }
+                                                case 2:
+                                                    wali.DeleteDoswal(namadoswal);
+                                            }
+                                            break;
+                                        }
+                                            case 4 :
+                                                break ;
                                     default:
                                         System.out.println("yang bener ");
                                         break;
