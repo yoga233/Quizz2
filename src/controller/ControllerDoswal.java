@@ -1,11 +1,12 @@
 package controller;
 import model.ModelDoswal;
-import model.ModelJurusan;
 
 import java.util.ArrayList;
 
 public class ControllerDoswal{
     ArrayList<ModelDoswal> Doswal;
+
+
     public ControllerDoswal(){
         this.Doswal = new ArrayList<>();
     }

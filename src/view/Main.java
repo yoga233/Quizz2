@@ -92,9 +92,12 @@ public class Main {
 
                                         }
                                         for(ModelJurusan jurusann :Jurusan.getDepartmens()){
+                                            if (jurusann.getNamaFakultas().equals(user)){
                                             System.out.println("Jurusan Mahasiswa " + jurusann.getNamaJurusan());
                                             System.out.println("Falkultas : " + jurusann.getNamaFakultas());
                                             System.out.println();
+
+                                            }
                                         }
                                             if (!wali.isDoswalEmpty()) {
                                                 System.out.println("Data Dosen Wali:");
