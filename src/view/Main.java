@@ -1,13 +1,7 @@
 package view;
 
-//import model.ModelJurusan;
-//import model.ModelMahasiswa;
-//import model.ModelPembayaran;
-//import model.ModelOrtuMhs;
 import controller.*;
-import model.ModelAkun;
-import model.ModelPendaftaran;
-import model.ModelAdmin;
+import model.*;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;
@@ -17,19 +11,11 @@ public class Main {
     public void pendaftaranmhs (){
     }
     public static void main(String[] args) {
-//        ModelJurusan jurus = new ModelJurusan();
-//        ModelMahasiswa siswa = new ModelMahasiswa();
-//        ModelPembayaran bayar = new ModelPembayaran();
-//        ModelOrtuMhs wali = new ModelOrtuMhs();
         ControllerAkun akun = new ControllerAkun();
         ControllerPendaftaran daftarmahasiswa = new ControllerPendaftaran();
         ControllerAdmin admin = new ControllerAdmin(); // Inisialisasi objek ControllerAdmin
         ControllerDoswal wali = new ControllerDoswal();
         ControllerPembayaran bayar = new ControllerPembayaran();
-        
-
-        
-        
   
 
         Scanner input = new Scanner(System.in);
