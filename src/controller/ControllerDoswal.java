@@ -1,5 +1,6 @@
 package controller;
 import model.ModelDoswal;
+import model.ModelJurusan;
 
 import java.util.ArrayList;
 
@@ -46,6 +47,15 @@ public class ControllerDoswal{
             }
         }
         return null;
+    }
+    public ModelDoswal searchDoswa(String namadoswal){
+        ModelDoswal doswal = null;
+        for (int i = 0 ; i < Doswal.size();i++){
+            if (namadoswal.equals(Doswal.get(i).getNama())){
+                doswal = Doswal.get(i);
+            }
+        }
+        return doswal;
     }
 }
 

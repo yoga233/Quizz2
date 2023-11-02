@@ -89,14 +89,16 @@ public class Main {
                                             if (!wali.isDoswalEmpty()) {
                                                 System.out.println("Data Dosen Wali:");
                                                 wali.ViewallMhs();
+                                                System.out.println();
                                             } else {
                                                 System.out.println("Dosen Wali belum ada.");
                                             }
                                             if (!bayar.isbayarEmpty()) {
-                                                System.out.println("Data Dosen Wali:");
+                                                System.out.println("SUDAH MEMBAYAR HER ");
                                                 bayar.ViewStrukall();
+                                                System.out.println();
                                             } else {
-                                                System.out.println("Dosen Wali belum ada.");
+                                                System.out.println("Belum Bayar Her ");
                                             }
                                             break;
                                             
@@ -147,7 +149,7 @@ public class Main {
                                         while (pilihanadmin != 3) {
                                             System.out.println("==================");
                                             System.out.println("1. Ganti Dosen ");
-                                            System.out.println("2. Ganti Dosen ");
+                                            System.out.println("2. Ganti jurusan ");
                                             System.out.println("Masukan pilihan ");
                                             pilihanadmin = input.nextInt();
                                             switch (pilihanadmin){
@@ -155,20 +157,30 @@ public class Main {
                                                     if (daftarmahasiswa.ifEmpty()){
                                                         System.out.println("Mahasiswa Tidak Ada");
                                                     }else {
-                                                        int Dosenwali = 0;
-                                                        System.out.println(" Masukan Nama Dosen wali :");
+
+                                                        System.out.println(" Masukan Nama Dosen wali yang ingin di ubah  :");
                                                         String NAmaDoswal =input.next();
-                                                        System.out.println(" Masukan new Doswal : ");
-                                                        String namaDoswal = input.next();
-                                                        ModelDoswal newdoswal = wali.getDoswal(NAmaDoswal);
-                                                        if (Dosenwali != 0){
-                                                            wali.UpadateDoswal(NAmaDoswal,namaDoswal);
-                                                            System.out.println(" Dosen Wali berhasil di perbaharui");
+                                                        ModelDoswal dosenwali = wali.searchDoswa(NAmaDoswal);
+
+                                                        if (dosenwali != null){
+                                                            System.out.println("Masukan nama dosen wali : ");
+                                                            String namabarudoswal = input.next();
+                                                            wali.UpadateDoswal(NAmaDoswal,namabarudoswal);
+                                                            System.out.println("Data dosen berhasil di perbaharui");
                                                         }else {
                                                             System.out.println("Dosen Wali tidak di temukan");
                                                         }
                                                     }
+                                                    break;
                                                 case 2:
+                                                    if(daftarmahasiswa.ifEmpty()){
+                                                        System.out.println("Mahasiswa Tidak ada ");
+                                                    }else {
+                                                        
+                                                    }
+                                                    break ;
+                                                default:
+                                                    System.out.println("---------------");
                                                     break ;
                                             }
                                             break;

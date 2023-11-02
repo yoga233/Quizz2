@@ -33,4 +33,13 @@ public class ControllerJurusan {
             }
         }
     }
-}
+    public ModelJurusan searchJurusan(String namaJurusan){
+        ModelJurusan jurusan = null;
+        for (int i = 0 ; i < departmens.size();i++){
+            if (namaJurusan.equals(departmens.get(i).getNama())){
+                jurusan = departmens.get(i);
+            }
+        }
+        return jurusan;
+    }
+    }
