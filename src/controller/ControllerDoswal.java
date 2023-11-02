@@ -39,8 +39,13 @@ public class ControllerDoswal{
         }
     }
 
-    public ArrayList<ModelDoswal> getDoswal(String nama) {
-        return Doswal;
+    public ModelDoswal getDoswal(String nama) {
+        for (ModelDoswal doswal : Doswal) {
+            if (nama.equals(doswal.getNama())) {
+                return doswal;
+            }
+        }
+        return null;
     }
 }
 

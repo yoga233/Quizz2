@@ -146,23 +146,30 @@ public class Main {
                                         int pilihanadmin = 0;
                                         while (pilihanadmin != 3) {
                                             System.out.println("==================");
-                                            System.out.println("1. Ganti Jurusan ");
+                                            System.out.println("1. Ganti Dosen ");
                                             System.out.println("2. Ganti Dosen ");
                                             System.out.println("Masukan pilihan ");
                                             pilihanadmin = input.nextInt();
                                             switch (pilihanadmin){
-                                                
                                                 case 1 :
                                                     if (daftarmahasiswa.ifEmpty()){
                                                         System.out.println("Mahasiswa Tidak Ada");
                                                     }else {
+                                                        int Dosenwali = 0;
                                                         System.out.println(" Masukan Nama Dosen wali :");
-                                                        String gantiDoswal =input.next();
-                                                        wali.getDoswal(namadoswal,gantiDoswal);
-                                                        wali.UpadateDoswal(,gantiDoswal);
+                                                        String NAmaDoswal =input.next();
+                                                        System.out.println(" Masukan new Doswal : ");
+                                                        String namaDoswal = input.next();
+                                                        ModelDoswal newdoswal = wali.getDoswal(NAmaDoswal);
+                                                        if (Dosenwali != 0){
+                                                            wali.UpadateDoswal(NAmaDoswal,namaDoswal);
+                                                            System.out.println(" Dosen Wali berhasil di perbaharui");
+                                                        }else {
+                                                            System.out.println("Dosen Wali tidak di temukan");
+                                                        }
                                                     }
                                                 case 2:
-                                                    wali.DeleteDoswal(namadoswal);
+                                                    break ;
                                             }
                                             break;
                                         }
