@@ -16,10 +16,19 @@ public class ModelJurusan{
         System.out.println("Nama Jurusan : "+ this.namaJurusan); 
         System.out.println("Nama Fakultas : " + this.namaFakultas);
     }
-    public String getNama(){
+    public String getNamaJurusan(){
         return namaJurusan;
     }
+
+    public String getNamaFakultas() {
+        return namaFakultas;
+    }
+
     public void setNamaFakultas(String namaFakultas){
         this.namaFakultas = namaFakultas;
+    }
+
+    public void setNamaJurusan(String namaJurusan) {
+        this.namaJurusan = namaJurusan;
     }
 }

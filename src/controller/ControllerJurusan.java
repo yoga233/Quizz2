@@ -19,16 +19,16 @@ public class ControllerJurusan {
            
         }
     }
-    public void updateJurusan(String namaJurusan, String newFakultas){
+    public void updateJurusan(String namaJurusan, String newjurusan){
         for (int i = 0; i<departmens.size(); i++){
-            if(namaJurusan.equals(departmens.get(i).getNama())){
-                departmens.get(i).setNamaFakultas(newFakultas);
+            if(namaJurusan.equals(departmens.get(i).getNamaJurusan())){
+                departmens.get(i).setNamaJurusan(newjurusan);
             }       
         }
     }
     public void deleteJurusan(String namaJurusan){
         for(int i = 0; i<departmens.size(); i++){
-            if(namaJurusan.equals(departmens.get(i).getNama())){
+            if(namaJurusan.equals(departmens.get(i).getNamaJurusan())){
                 departmens.remove(i);
             }
         }
@@ -36,7 +36,7 @@ public class ControllerJurusan {
     public ModelJurusan searchJurusan(String namaJurusan){
         ModelJurusan jurusan = null;
         for (int i = 0 ; i < departmens.size();i++){
-            if (namaJurusan.equals(departmens.get(i).getNama())){
+            if (namaJurusan.equals(departmens.get(i).getNamaJurusan())){
                 jurusan = departmens.get(i);
             }
         }

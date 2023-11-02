@@ -91,7 +91,8 @@ public class Main {
 
                                         }
                                         for(ModelJurusan jurusann :Jurusan.getDepartmens()){
-                                            System.out.println("Jurusan Mahasiswa " + jurusann.getNama());
+                                            System.out.println("Jurusan Mahasiswa " + jurusann.getNamaJurusan());
+                                            System.out.println("Falkultas : " + jurusann.getNamaFakultas());
                                             System.out.println();
                                         }
                                             if (!wali.isDoswalEmpty()) {
@@ -158,6 +159,7 @@ public class Main {
                                             System.out.println("==================");
                                             System.out.println("1. Ganti Dosen ");
                                             System.out.println("2. Ganti jurusan ");
+                                            System.out.println("3. Kembali Menu Sebelumnya");
                                             System.out.println("Masukan pilihan ");
                                             pilihanadmin = input.nextInt();
                                             switch (pilihanadmin){
@@ -179,7 +181,7 @@ public class Main {
                                                             System.out.println("Dosen Wali tidak di temukan");
                                                         }
                                                     }
-                                                    break;
+                                                    continue;
                                                 case 2:
                                                     if(daftarmahasiswa.ifEmpty()){
                                                         System.out.println("Mahasiswa Tidak ada ");
@@ -196,7 +198,9 @@ public class Main {
                                                             System.out.println(" Jurusan Tidak di temukan ");
                                                         }
                                                     }
-                                                    break ;
+                                                    continue;
+                                                case 3:
+                                                    break;
                                                 default:
                                                     System.out.println("---------------");
                                                     break ;
