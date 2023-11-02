@@ -39,6 +39,11 @@ public class ControllerDoswal{
         }
     }
 
-
-
+    public ArrayList<ModelDoswal> getDoswal(String nama) {
+        return Doswal;
+    }
 }
+
+
+
+
