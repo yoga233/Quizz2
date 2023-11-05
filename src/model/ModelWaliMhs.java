@@ -18,4 +18,20 @@ public class ModelWaliMhs{
         System.out.println("Alamat : "+ this.alamat);
         System.out.println("No Telp Wali : " + this.notelp);
     }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public String getNoktp() {
+        return noktp;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public String getNotelp() {
+        return notelp;
+    }
 }

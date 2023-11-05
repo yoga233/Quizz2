@@ -67,15 +67,19 @@ public class Main {
                                         String nama = input.next();
                                         System.out.println("Masukkan Tanggal Lahir: ");
                                         String tanggalLahir = input.next();
-                                        System.out.println("Masukkan Nama Wali Mahasiswa: ");
-                                        String waliMhs = input.next();
+//                                        System.out.println("Masukkan Nama Wali Mahasiswa: ");
+//                                        String waliMhs = input.next();
                                         System.out.println("Masukkan Jurusan: ");
                                         String jurusan = input.next();
                                         System.out.println("Masukan Fakultas :");
                                         String fakultas = input.next();
                                         
-                                        ModelPendaftaran mahasiswaBaru = new ModelPendaftaran(nama, tanggalLahir, waliMhs,user);
-                                        daftarmahasiswa.daftarMahasiswa(nama,tanggalLahir,waliMhs,user);
+                                        System.out.println("Nama Wali : ");
+                                        String wNama = input.next();
+                                        System.out.println("Alamat Wali : ");
+                                        String wAlamat = input.next();
+                                        //ModelPendaftaran mahasiswaBaru = new ModelPendaftaran(nama, tanggalLahir, waliMhs,user);
+                                        daftarmahasiswa.daftarMahasiswa(nama,tanggalLahir,user, "123", wNama, "jalan", "082394");
                                         Jurusan.insertJurusan(jurusan,fakultas);
                                         System.out.println("Pendaftaran mahasiswa berhasil.");
                                         break;
@@ -87,7 +91,8 @@ public class Main {
                                             if (mahasiswa.getUsername().equals(user)) {
                                                 System.out.println("Nama: " + mahasiswa.getMhs());
                                                 System.out.println("Tanggal Lahir: " + mahasiswa.getTglLahir());
-                                                System.out.println("Wali Mahasiswa: " + mahasiswa.getWaliMhs());
+                                                System.out.println("Nama Wali Mahasiswa: " + mahasiswa.getmWali().getNama());
+                                                System.out.println("Alamat Wali Mahasiswa: " + mahasiswa.getmWali().getAlamat());
                                             }
                                         }
                                         boolean jurusanDitemukan = false;
@@ -214,7 +219,7 @@ public class Main {
                                             break;
                                         }
                                             case 4 :
-                                                break ;
+                                                continue ;
                                     default:
                                         System.out.println("yang bener ");
                                         break;

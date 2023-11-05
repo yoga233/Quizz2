@@ -20,4 +20,5 @@ public class ControllerWaliMhs {
             this.wali.get(i).ViewDataWaliMhs();
         }
     }
+    
 }

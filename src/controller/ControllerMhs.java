@@ -14,9 +14,9 @@ public class ControllerMhs {
         this.dosenWali = new ArrayList<>();
     }
 
-    public void InsertMhs(String nama, String npm, String telp, ModelDoswal dosenWali) {
+    public void InsertMhs(String nama, String npm, String telp, ModelDoswal dosenWali, String wKtp, String wNama, String wAlamat, String wTelp) {
         int index = siswa.size();
-        this.siswa.add(new ModelMhs(nama, npm, telp));
+        this.siswa.add(new ModelMhs(nama, npm, telp, wKtp, wNama, wAlamat, wTelp));
         this.dosenWali.add(dosenWali);
     }
 

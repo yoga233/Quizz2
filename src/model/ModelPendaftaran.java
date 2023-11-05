@@ -4,12 +4,13 @@ public class ModelPendaftaran {
     String Mhs;
     String tglLahir;
     String waliMhs;
+    ModelWaliMhs mWali;
 //    String jurusan;
     String username;
-    public ModelPendaftaran(String Mhs, String tglLahir, String waliMhs, String username) {
+    public ModelPendaftaran(String Mhs, String tglLahir, ModelWaliMhs waliMhs, String username) {
         this.Mhs = Mhs;
         this.tglLahir = tglLahir;
-        this.waliMhs = waliMhs;
+        this.mWali = waliMhs;
         this.username = username;
 //        this.jurusan = jurusan;
     }
@@ -41,5 +42,10 @@ public class ModelPendaftaran {
 
     public void setDosenWali(ModelDoswal doswal) {
     }
+
+    public ModelWaliMhs getmWali() {
+        return mWali;
+    }
+    
 }
 
